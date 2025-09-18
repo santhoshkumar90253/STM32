@@ -1,0 +1,10 @@
+18:15:39 **** Incremental Build of configuration Debug for project 12_Memory_to_Memory ****
+make -j4 all 
+arm-none-eabi-size  12_Memory_to_Memory.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16604	     12	   2124	  18740	   4934	12_Memory_to_Memory.elf
+Finished building: default.size.stdout
+ 
+
+18:15:39 Build Finished. 0 errors, 0 warnings. (took 481ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;05_ADC_continuous_conversion/04_Timer.ioc&apos; to &apos;05_ADC_Continuous_conversion.ioc&apos;" description="Rename resource &apos;04_Timer.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="04_Timer.ioc" name="05_ADC_Continuous_conversion.ioc" stamp="1757921105756" updateReferences="true"/>
+</session>

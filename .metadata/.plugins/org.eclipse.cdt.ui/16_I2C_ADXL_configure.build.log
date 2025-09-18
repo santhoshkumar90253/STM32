@@ -1,0 +1,10 @@
+18:58:13 **** Incremental Build of configuration Debug for project 16_I2C_ADXL_configure ****
+make -j4 all 
+arm-none-eabi-size  16_I2C_ADXL_configure.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19268	     92	   2196	  21556	   5434	16_I2C_ADXL_configure.elf
+Finished building: default.size.stdout
+ 
+
+18:58:13 Build Finished. 0 errors, 0 warnings. (took 625ms)
+

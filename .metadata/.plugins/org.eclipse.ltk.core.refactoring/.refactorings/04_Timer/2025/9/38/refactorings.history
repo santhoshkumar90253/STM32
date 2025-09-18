@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;04_Timer/03_UART_COM.ioc&apos; to &apos;04_Timer.ioc&apos;" description="Rename resource &apos;03_UART_COM.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="03_UART_COM.ioc" name="04_Timer.ioc" stamp="1757919250507" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;04_Timer/03_UART_COM Debug.launch&apos; to &apos;04_Timer.launch&apos;" description="Rename resource &apos;03_UART_COM Debug.launch&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="03_UART_COM Debug.launch" name="04_Timer.launch" stamp="1757921127480" updateReferences="true"/>
+</session>

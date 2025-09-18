@@ -18,10 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include<string.h>
-uint8_t tx_buffer[] = "Hello SPI";          // Data to send via SPI
-uint8_t rx_buffer[sizeof(tx_buffer)];       // Buffer to store received SPI data
-volatile uint8_t spi_ready = 1;             // Flag to indicate SPI is ready for next transfer
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -59,27 +56,20 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_SPI1_Init(void);
-/* USER CODE BEGIN PFP */
 
-/* USER CODE END PFP */
+uint8_t tx_buffer[] = "Hello SPI";          // Data to send via SPI
+uint8_t rx_buffer[sizeof(tx_buffer)];       // Buffer to store received SPI data
+volatile uint8_t spi_ready = 1;             // Flag to indicate SPI is ready for next transfer
 
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
 
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 {
     if (hspi->Instance == SPI1)
     {
-        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET);  // Set CS HIGH (deselect slave)
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);  // Set CS HIGH (deselect slave)
 
         // Optional: Send received SPI data over UART
-        HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer), HAL_MAX_DELAY);
+        HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer)-1, HAL_MAX_DELAY);
 
         // Add newline for readability in UART terminal
         uint8_t newline[] = "\r\n";
@@ -123,21 +113,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);  // Pull CS LOW to select slave
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);  // Pull CS LOW to select slave
 
       // Start SPI transfer using DMA (non-blocking)
       HAL_SPI_TransmitReceive_DMA(&hspi1, tx_buffer, rx_buffer, sizeof(tx_buffer));
   while (1)
   {
     /* USER CODE END WHILE */
-	  if (spi_ready)
-	  {
-		  spi_ready = 0;                                // Reset ready flag
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);  // Select slave
-		  HAL_SPI_TransmitReceive_DMA(&hspi1, tx_buffer, rx_buffer, sizeof(tx_buffer)); // Start new transfer
-	  }
 
-	  HAL_Delay(1000); // Wait 1 second before next check/transfer
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -305,7 +288,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -313,12 +296,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA4 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  /*Configure GPIO pin : PB13 */
+  GPIO_InitStruct.Pin = GPIO_PIN_13;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
