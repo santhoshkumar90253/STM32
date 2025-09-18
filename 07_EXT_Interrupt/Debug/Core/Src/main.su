@@ -1,0 +1,9 @@
+../Core/Src/main.c:72:6:EXT_Interrupt_GPIO_PC13_init	40	static
+../Core/Src/main.c:111:5:__io_putchar	16	static
+../Core/Src/main.c:117:6:EXTI15_10_IRQHandler	8	static
+../Core/Src/main.c:123:6:HAL_GPIO_EXTI_Callback	16	static
+../Core/Src/main.c:133:5:main	8	static
+../Core/Src/main.c:172:6:SystemClock_Config	96	static
+../Core/Src/main.c:222:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:257:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:299:6:Error_Handler	4	static,ignoring_inline_asm

@@ -1,0 +1,5 @@
+../Core/Src/main.c:60:6:HAL_UART_TxcpltCallBack	0	static
+../Core/Src/main.c:66:6:HAL_UART_RxcpltCallBack	0	static
+../Core/Src/main.c:123:6:SystemClock_Config	96	static,ignoring_inline_asm
+../Core/Src/main.c:77:5:main	48	static,ignoring_inline_asm
+../Core/Src/main.c:251:6:Error_Handler	0	static,ignoring_inline_asm
