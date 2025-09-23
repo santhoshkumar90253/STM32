@@ -1,0 +1,11 @@
+../Src/main.c:8:6:SPI2_GPIOInits	24	static
+../Src/main.c:38:6:SPI2_Inits_master	40	static
+../Src/main.c:54:6:SPI2_Inits_Slave	40	static
+../Src/main.c:80:9:SPI2_Transfer	24	static
+../Src/main.c:88:6:SD_Command	16	static
+../Src/main.c:98:9:SD_WaitR1	16	static
+../Src/main.c:109:6:SD_WaitNotBusy	8	static
+../Src/main.c:114:5:SD_Init	16	static
+../Src/main.c:131:5:SD_ReadBlock	40	static
+../Src/main.c:153:9:SD_WriteBlock	24	static
+../Src/main.c:176:5:main	32	static
