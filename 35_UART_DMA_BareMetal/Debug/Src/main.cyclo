@@ -1,0 +1,6 @@
+../Src/main.c:10:6:USART2_Init	1
+../Src/main.c:23:6:USART2_GPIOInit	1
+../Src/main.c:43:6:delay	2
+../Src/main.c:49:5:__io_putchar	1
+../Src/main.c:54:6:USART_DMATxInit	1
+../Src/main.c:71:5:main	2

@@ -1,0 +1,2 @@
+../drivers/src/stm32Lxx_Systick_Driver.c:49:6:systickDelayMs	24	static
+../drivers/src/stm32Lxx_Systick_Driver.c:63:6:systick_Interrupt1Hz	4	static

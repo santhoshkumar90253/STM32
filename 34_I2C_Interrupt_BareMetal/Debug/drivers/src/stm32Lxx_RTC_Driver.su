@@ -1,0 +1,11 @@
+../drivers/src/stm32Lxx_RTC_Driver.c:54:9:RTC_init	16	static
+../drivers/src/stm32Lxx_RTC_Driver.c:64:6:RTC_setCurrentTime	24	static
+../drivers/src/stm32Lxx_RTC_Driver.c:88:6:RTC_getCurrentTime	24	static
+../drivers/src/stm32Lxx_RTC_Driver.c:112:6:RTC_setCurrentDate	16	static
+../drivers/src/stm32Lxx_RTC_Driver.c:120:6:RTC_getCurrentDate	16	static
+../drivers/src/stm32Lxx_RTC_Driver.c:124:13:RTC_I2CPinConfig	32	static
+../drivers/src/stm32Lxx_RTC_Driver.c:149:13:RTC_I2CConfig	8	static
+../drivers/src/stm32Lxx_RTC_Driver.c:155:13:RTC_write	32	static
+../drivers/src/stm32Lxx_RTC_Driver.c:163:16:RTC_read	32	static
+../drivers/src/stm32Lxx_RTC_Driver.c:170:16:RTC_BinaryToBCD	24	static
+../drivers/src/stm32Lxx_RTC_Driver.c:183:16:RTC_BCDToBinary	24	static

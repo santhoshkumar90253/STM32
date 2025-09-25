@@ -1,0 +1,4 @@
+../drivers/src/stm32Lxx_timer_driver.c:10:6:Timer_HZ1_init	4	static
+../drivers/src/stm32Lxx_timer_driver.c:20:6:Timer_PA5OutputCompare	4	static
+../drivers/src/stm32Lxx_timer_driver.c:46:6:Timer_PA6InputCompare	4	static
+../drivers/src/stm32Lxx_timer_driver.c:69:6:Timer_1HzInterruptInit	8	static
